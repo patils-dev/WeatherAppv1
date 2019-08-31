@@ -1,0 +1,46 @@
+
+<!--
+Author: Smita krushna patil
+Objective: To display weather of specified city in celcius and fahrenheit-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>WeatherApp</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <!--leftside display-->
+        <div class="leftSide">
+            <h1 class="name"><span>Weather</span>App</h1>
+        </div>
+        <!-- rightside display -->
+        <div class="rightSide">
+            <div id="showWeather">
+                <h1 id="cityName">Banglore</h1>,<h1 id="stateName">Kranataka</h1>
+                <p id="day"></p>
+                <p id="weatherName">Partly cloudy⛅</p>
+                <h2 id="temperature"></h2>
+                <button class="celcius" onclick="displayCelcius()">&#8451; |</button>
+                <button class="fahrenheit" onclick="displayFahrenheit();">F</button>
+        
+                <!--To select city -->
+                <h4>Enter City Name :</h4>
+                <input type="text" id="list" list="datalist" name="cities" placeholder="Enter City" />
+                    <datalist id="datalist">
+                        <option value="Banglore">
+                        <option value="Chennai">
+                        <option value="Pune">
+                        <option value="Kolhapur">
+                        <option value="Mumbai">
+                        <option value="Hyderabad">    
+                        <option value="Belgaum">
+                        <option value="Dehli">
+                    </datalist>
+                <button onclick="displayData()">submit</button>
+            </div>    
+        </div>
+    </body>
+    <script type="text/javascript" src="app.js"></script>
+
+</html>

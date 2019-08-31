@@ -1,0 +1,111 @@
+body{
+    margin-left: 0;
+    margin-top: 0;
+}
+.leftSide{
+        width: 50%;
+        background-color: rgb(22, 169, 228);
+        height: 500px; 
+        float: left;
+        padding: 10px;
+        padding-bottom: 200px;
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+}
+.rightSide{
+    align-items: center;
+    padding-top:200px;
+    padding-left:11rem;
+    display: flex;
+}
+.showWeather{
+    padding: 20%;
+}
+span{
+    color: aliceblue;
+}
+.celcius{
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+}
+.fahrenheit{
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+}
+h1{ 
+    display: inline;
+} 
+icon{
+    display: inline;
+}
+.name{
+    font-size: 3rem;
+}
+h2{
+    display: inline;;
+}
+
+.leftSide{
+        width: 50%;
+        background-color: rgb(22, 169, 228);
+        height: 500px; 
+        float: left;
+        padding: 10px;
+        padding-bottom: 200px;
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+}
+.rightSide{
+    align-items: center;
+    padding-top:200px;
+    padding-left:11rem;
+    display: flex;
+}
+.showWeather{
+    padding: 20%;
+}
+span{
+    color: aliceblue;
+}
+h3{
+    font-family: 'Times New Roman', Times, serif;
+    display: inline;
+    font-weight: block;
+}
+
+.celcius{
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+}
+.fahrenheit{
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+}
+#showWeather#weatherName
+{
+    display:inline;
+}
+h1{
+    display: inline;
+}
+/* h2{
+    display: inline;
+} */
+.name{
+    font-size: 3rem;
+}
+
