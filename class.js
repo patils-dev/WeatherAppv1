@@ -15,7 +15,16 @@ class displayWeather{
     }
 }
 class UI{
-    
+    //display day and date
+    displayDate()
+    {
+        var d=new Date().toLocaleTimeString('en-US', { hour: 'numeric', hour12: true, minute: 'numeric' });
+        var newD = new Date();
+        var n = newD.getDay()
+        let week=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+        document.getElementById("day").innerHTML =week[n]+" , "+d;
+    }
+
     displayValues(dw){
         let resultcity=dw.city;
         // let selectedCity=dw.weather.find(v=>{return v.city==result});
@@ -29,19 +38,21 @@ class UI{
         document.getElementById("temperature").innerHTML=selectedCity['temperature'];
     }
     displayFahrenheit(dw){
-            let cityTemp=document.getElementById("cityName").innerHTML;
-            let selectedCity=weather.find(v=>{return v.city==cityTemp}); 
+            // let cityTemp=document.getElementById("cityName").innerHTML;
+            let resultcity=dw.city;
+            console.log(resultcity);
+            let selectedCity=weather.find(v=>{return v.city==resultcity}); 
             let fahTemp=Math.round((selectedCity.temperature*1.8)+32);
             console.log(fahTemp);
             document.getElementById("temperature").innerHTML=fahTemp;
         
         }
-      
+     displayCelcius(dw){
+            // let cityTemp=document.getElementById("cityName").innerHTML;
+            let resultcity=dw.city;
+            let selectedCity=weather.find(v=>{return v.city==resultcity});
+            document.getElementById("temperature").innerHTML=selectedCity['temperature'];
+            //console.log(selectedCity);
+        }
 }
 
-// document.getElementById("myBtn").addEventListener("click", displayDate);
-
-// document.getElementById("fahrenheit").addEventListener("click",function display(v)
-// {
-//     ui.displayFahrenheit(dw);
-// })

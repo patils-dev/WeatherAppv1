@@ -82,7 +82,26 @@ document.getElementById("btn").addEventListener("click",function displayData(e){
     // console.log(dw.city);
     // console.log(dw.weather);
     ui=new UI();
+    ui.displayDate();
     ui.displayValues(dw);
+    // ui. displayFahrenheit(dw);
     
     // console.log(result);
+})
+
+// document.getElementById("myBtn").addEventListener("click", displayDate);
+
+document.getElementById("fahrenheit").addEventListener("click",function display(e){
+
+    let result=document.getElementById("list").value;
+    const dw=new displayWeather(result);
+    ui=new UI();
+    ui.displayFahrenheit(dw);
+})
+document.getElementById("celcius").addEventListener("click",function displayCel(e){
+    
+    let result=document.getElementById("list").value;
+    const dw=new displayWeather(result);
+    ui=new UI();
+    ui.displayCelcius(dw);
 })

@@ -81,14 +81,14 @@ h3{
     font-weight: block;
 }
 
-.celcius{
+#celcius{
     background:none;
     border:none;
     margin:0;
     padding:0;
     cursor: pointer;
 }
-.fahrenheit{
+#fahrenheit{
     background:none;
     border:none;
     margin:0;
