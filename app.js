@@ -26,10 +26,10 @@ function displayData()
     displayDate();
     let result=document.getElementById("list").value;
     let selectedCity=weather.find(v=>{return v.city==result})
-    console.log(selectedCity);
+    //console.log(selectedCity);
     document.getElementById("cityName").innerHTML=selectedCity['city'];
     document.getElementById("stateName").innerHTML=selectedCity['state'];
-    document.getElementById("weatherName").innerHTML=selectedCity['weather'];
+    document.getElementById("weatherName").innerHTML=selectedCity['weather']+selectedCity['icon'];
     document.getElementById("temperature").innerHTML=selectedCity['temperature'];
 }
 //to find temperature in fahrenheit
@@ -37,7 +37,7 @@ function displayFahrenheit(){
     let cityTemp=document.getElementById("cityName").innerHTML;
     let selectedCity=weather.find(v=>{return v.city==cityTemp}); 
     let fahTemp=Math.round((selectedCity.temperature*1.8)+32);
-    console.log(fahTemp);
+    //console.log(fahTemp);
     document.getElementById("temperature").innerHTML=fahTemp;
 
 }
@@ -47,6 +47,6 @@ function displayCelcius()
     let cityTemp=document.getElementById("cityName").innerHTML;
     let selectedCity=weather.find(v=>{return v.city==cityTemp});
     document.getElementById("temperature").innerHTML=selectedCity['temperature'];
-    console.log(selectedCity);
+    //console.log(selectedCity);
 }
 
