@@ -14,11 +14,6 @@ const weather=[
 
 //display city details
 
-document.getElementById("list").addEventListener("submit",function displayData(v){
-    let result=document.getElementById("list").value;
-    console.log(result);
-})
-  
 document.getElementById("btn").addEventListener("click",function displayData(e){
 
     let result=document.getElementById("list").value;
@@ -33,15 +28,16 @@ document.getElementById("btn").addEventListener("click",function displayData(e){
     // console.log(result);
 })
 
-
-
-document.getElementById("fahrenheit").addEventListener("click",function display(e){
+//display temperature in Fahrenheit
+document.getElementById("fahrenheit").addEventListener("click",function displayFah(e){
 
     let result=document.getElementById("list").value;
     const dw=new displayWeather(result);
     ui=new UI();
     ui.displayFahrenheit(dw);
 })
+
+//display temperature in celcius
 document.getElementById("celcius").addEventListener("click",function displayCel(e){
     
     let result=document.getElementById("list").value;
