@@ -21,7 +21,7 @@ Objective: To display weather of specified city in celcius and fahrenheit-->
                 <p id="weatherName">Partly cloudy⛅</p>
                 <h2 id="temperature"></h2>
                 <button class="celcius" onclick="displayCelcius()">&#8451; |</button>
-                <button class="fahrenheit" onclick="displayFahrenheit();">F</button>
+                <button class="fahrenheit" onclick="display();">F</button>
         
                 <!--To select city -->
                 <h4>Enter City Name :</h4>
@@ -36,10 +36,11 @@ Objective: To display weather of specified city in celcius and fahrenheit-->
                         <option value="Belgaum">
                         <option value="Dehli">
                     </datalist>
-                <button onclick="displayData()">submit</button>
+                <button id="btn" type="submit" >submit</button>
             </div>    
         </div>
     </body>
     <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="class.js"></script>
 
 </html>
