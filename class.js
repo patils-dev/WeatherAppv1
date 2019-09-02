@@ -29,7 +29,7 @@ class UI{
         let resultcity=dw.city;
         // let selectedCity=dw.weather.find(v=>{return v.city==result});
         console.log(resultcity);
-        console.log(weather)
+        console.log(dw.weather)
         let selectedCity=dw.weather.find(v=>{return v.city==resultcity})
         // console.log(selectedCity);
         document.getElementById("cityName").innerHTML=selectedCity['city'];
@@ -41,7 +41,7 @@ class UI{
             // let cityTemp=document.getElementById("cityName").innerHTML;
             let resultcity=dw.city;
             console.log(resultcity);
-            let selectedCity=weather.find(v=>{return v.city==resultcity}); 
+            let selectedCity=dw.weather.find(v=>{return v.city==resultcity}); 
             let fahTemp=Math.round((selectedCity.temperature*1.8)+32);
             console.log(fahTemp);
             document.getElementById("temperature").innerHTML=fahTemp;
@@ -50,7 +50,7 @@ class UI{
      displayCelcius(dw){
             // let cityTemp=document.getElementById("cityName").innerHTML;
             let resultcity=dw.city;
-            let selectedCity=weather.find(v=>{return v.city==resultcity});
+            let selectedCity=dw.weather.find(v=>{return v.city==resultcity});
             document.getElementById("temperature").innerHTML=selectedCity['temperature'];
             //console.log(selectedCity);
         }

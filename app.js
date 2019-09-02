@@ -1,19 +1,5 @@
 
-
-
-const weather=[
-    {city:"Pune",state:"Maharashtra", weather:"Cloudy",temperature:32,icon:"⛅"},
-    {city:"Kolhapur",state:"Maharashtra", weather:"Rainy",temperature:26,icon:"🌧️"},
-    {city:"Banglore",state:"Karnataka", weather:"Sunny",temperature:28,icon:"☀️"},
-    {city:"Mumbai",state:"Maharashtra", weather:"Rainy",temperature:29,icon:"🌧️"},
-    {city:"Chennai",state:"Tamilnadu", weather:"Sunny",temperature:30,icon:"☀️"},
-    {city:"Dehli",state:"Dehli", weather:"Cloudy", temperature:28,icon:"⛅"},
-    {city:"Hyderabad",state:"Andhrapradesh",weather:"Sunny",temperature:30,icon:"☀️"},
-    {city:"Belgaum",state:"Karnataka", weather:"Rainy",temperature:"25",icon:"🌧️"}
-]
-
 //display city details
-
 document.getElementById("btn").addEventListener("click",function displayData(e){
 
     let result=document.getElementById("list").value;
