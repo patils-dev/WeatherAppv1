@@ -10,13 +10,13 @@ function displayDate()
 }
 
 const weather=[
-    { city:"Pune", state:"Maharashtra", weather:"Cloudy",temperature:32,icon:"⛅"},
-    { city:"Kolhapur", state:"Maharashtra", weather:"Rainy",temperature:26,icon:"🌧️"},
-    { city:"Banglore",state:"Karnataka", weather:"Sunny",temperature:28,icon:"☀️"},
-    { city:"Mumbai", state:"Maharashtra", weather:"Rainy",temperature:29,icon:"🌧️"},
-    { city:"Chennai", state:"Tamilnadu", weather:"Sunny",temperature:30,icon:"☀️"},
-    {city:"Dehli", state:"Dehli", weather:"Cloudy", temperature:28,icon:"⛅"},
-    {city:"Hyderabad", state:"Andhrapradesh",weather:"Sunny",temperature:30,icon:"☀️"},
+    {city:"Pune",state:"Maharashtra", weather:"Cloudy",temperature:32,icon:"⛅"},
+    {city:"Kolhapur",state:"Maharashtra", weather:"Rainy",temperature:26,icon:"🌧️"},
+    {city:"Banglore",state:"Karnataka", weather:"Sunny",temperature:28,icon:"☀️"},
+    {city:"Mumbai",state:"Maharashtra", weather:"Rainy",temperature:29,icon:"🌧️"},
+    {city:"Chennai",state:"Tamilnadu", weather:"Sunny",temperature:30,icon:"☀️"},
+    {city:"Dehli",state:"Dehli", weather:"Cloudy", temperature:28,icon:"⛅"},
+    {city:"Hyderabad",state:"Andhrapradesh",weather:"Sunny",temperature:30,icon:"☀️"},
     {city:"Belgaum",state:"Karnataka", weather:"Rainy",temperature:"25",icon:"🌧️"}
 ]
 
@@ -24,12 +24,9 @@ const weather=[
 function displayData()
 {
     displayDate();
-    
-
-    let result=document.getElementById("list");
-    
+    let result=document.getElementById("list").value;
     let selectedCity=weather.find(v=>{return v.city==result})
-    console.log(selectedCity)
+    console.log(selectedCity);
     document.getElementById("cityName").innerHTML=selectedCity['city'];
     document.getElementById("stateName").innerHTML=selectedCity['state'];
     document.getElementById("weatherName").innerHTML=selectedCity['weather'];
@@ -40,7 +37,7 @@ function displayFahrenheit(){
     let cityTemp=document.getElementById("cityName").innerHTML;
     let selectedCity=weather.find(v=>{return v.city==cityTemp}); 
     let fahTemp=Math.round((selectedCity.temperature*1.8)+32);
-    console.log(fahTemp)
+    console.log(fahTemp);
     document.getElementById("temperature").innerHTML=fahTemp;
 
 }
@@ -48,7 +45,7 @@ function displayFahrenheit(){
 function displayCelcius()
 {
     let cityTemp=document.getElementById("cityName").innerHTML;
-    let selectedCity=weather.find(v=>{return v.city==cityTemp})
+    let selectedCity=weather.find(v=>{return v.city==cityTemp});
     document.getElementById("temperature").innerHTML=selectedCity['temperature'];
     console.log(selectedCity);
 }
