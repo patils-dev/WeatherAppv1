@@ -9,7 +9,6 @@ document.getElementById("btn").addEventListener("click",function displayData(e){
     ui.displayDate();
     ui.displayValues(dw);
     // ui. displayFahrenheit(dw);
-    
     // console.log(result);
 })
 
@@ -21,6 +20,7 @@ document.getElementById("fahrenheit").addEventListener("click",function displayF
     ui=new UI();
     ui.displayFahrenheit(dw);
 })
+
 
 //display temperature in celcius
 document.getElementById("celcius").addEventListener("click",function displayCel(e){
