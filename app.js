@@ -1,4 +1,3 @@
-
 //display city details
 document.getElementById("btn").addEventListener("click",function displayData(e){
 
