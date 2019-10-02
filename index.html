@@ -6,43 +6,39 @@ Objective: To display weather of specified city in celcius and fahrenheit-->
     <head>
         <meta charset='utf-8'>
         <title>WeatherApp</title>
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
         <!--leftside display-->
-        <div class="leftSide">
-            <h1 class="name"><span>Weather</span>App</h1>
+        <div class="container-fluid">
+            <div class="leftSide">
+                <h1 class="name"><span>Weather</span>App</h1>
+            </div>
+            <!-- rightside display -->
+            <div class="rightSide">
+                <div id="showWeather">
+                    <h1 id="cityName">Banglore</h1>, <h1 id="stateName">Kranataka</h1>
+                    <p id="day"></p>
+                    <div>
+                        <p id="weatherName">Partly cloudy</p><img id="icon">
+                    </div>
+                    <h2 id="temperature"></h2>
+                    <button id="celcius" >&#8451; |</button>
+                    <button id="fahrenheit" >F</button>
+            
+                    <!--To select city -->
+                    <h4>Enter City Name :</h4>
+                    <input type="text" id="list"  name="cities" placeholder="Enter City" />
+                    <!-- <button id="btn" type="submit" >submit</button> -->
+                </div>
+            </div>
         </div>
-        <!-- rightside display -->
-        <div class="rightSide">
-            <div id="showWeather">
-                <h1 id="cityName"></h1>, <h1 id="stateName">Kranataka</h1>
-                <p id="day"></p>
-                <p id="weatherName"></p>
-                <h2 id="temperature"></h2>
-                <button id="celcius" >&#8451; |</button>
-                <button id="fahrenheit" >F</button>
         
-                <!--To select city -->
-                <h4>Enter City Name :</h4>
-                <input type="text" id="list" list="datalist" name="cities" placeholder="Enter City" />
-                    <datalist id="datalist">
-                        <option value="Banglore">
-                        <option value="Chennai">
-                        <option value="Pune">
-                        <option value="Kolhapur">
-                        <option value="Mumbai">
-                        <option value="Hyderabad">    
-                        <option value="Belgaum">
-                        <option value="Dehli">
-                    </datalist>
-                <button id="btn" type="submit" >submit</button>
-            </div>    
-        </div>
     </body>
-    <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript" src="class.js"></script>
+    <!-- <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="class.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- <script type="text/javascript" src="try.js"></script> -->
+    <script type="text/javascript" src="try.js"></script>
 
 </html>

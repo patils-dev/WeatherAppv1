@@ -97,7 +97,17 @@ h3{
     padding:0;
     cursor: pointer;
 }
-#showWeather#weatherName
+#celcius:active {
+    background-color:rgb(87, 183, 221);
+    box-shadow: 0 5px gray;
+    transform: translateY(2px);
+ }
+ #fahrenheit:active {
+    background-color:rgb(87, 183, 221);
+    box-shadow: 0 5px gray;
+    transform: translateY(2px);
+ }
+#showWeather,#weatherName
 {
     display:inline;
 }
@@ -110,13 +120,17 @@ h1{
 .name{
     font-size: 3rem;
 }
-/* #list{
-height: 30px;
-border-radius: 10px;
-position: relative;
-/* border: 2px solid #cdcdcd; */
-/* border-color: rgba(0, 0, 0, .14);
-background-color: AliceBlue;
-font-size: 14px;
+#list{
 
-} */ 
+        background:#FFFFFF url("search.png") no-repeat 4px 4px;
+        padding:4px 4px 4px 22px;
+        border:2px solid #456879;
+	    border-radius:10px;
+        width:230px;
+        height:18px;
+} 
+#icon{
+    size:20;
+    height: 30px;
+    width:30px;
+}

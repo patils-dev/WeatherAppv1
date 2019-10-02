@@ -3,30 +3,30 @@ document.getElementById("btn").addEventListener("click",function displayData(e){
 
     let result=document.getElementById("list").value;
     const dw=new displayWeather(result);
-    dw.displayValues();
     // console.log(dw.city);
     // console.log(dw.weather);
-    // ui=new UI();
-    // ui.displayDate();
-    // ui.displayValues(dw);
+    ui=new UI();
+    ui.displayDate();
+    ui.displayValues(dw);
     // ui. displayFahrenheit(dw);
     // console.log(result);
 })
 
 //display temperature in Fahrenheit
-// document.getElementById("fahrenheit").addEventListener("click",function displayFah(e){
+document.getElementById("fahrenheit").addEventListener("click",function displayFah(e){
 
-//     let result=document.getElementById("list").value;
-//     const dw=new displayWeather(result);
-//     ui=new UI();
-//     ui.displayFahrenheit(dw);
-// })
+    let result=document.getElementById("list").value;
+    const dw=new displayWeather(result);
+    ui=new UI();
+    ui.displayFahrenheit(dw);
+})
 
-// //display temperature in celcius
-// document.getElementById("celcius").addEventListener("click",function displayCel(e){
+
+//display temperature in celcius
+document.getElementById("celcius").addEventListener("click",function displayCel(e){
     
-//     let result=document.getElementById("list").value;
-//     const dw=new displayWeather(result);
-//     ui=new UI();
-//     ui.displayCelcius(dw);
-// })
+    let result=document.getElementById("list").value;
+    const dw=new displayWeather(result);
+    ui=new UI();
+    ui.displayCelcius(dw);
+})
