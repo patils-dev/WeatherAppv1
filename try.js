@@ -8,10 +8,10 @@ document.getElementById("list").onkeypress = function(event){
 function displayData(){
 
     let result=document.getElementById("list").value;
-    const proxy="https://cors-anywhere.herokupp.com/"
-    $.getJSON(`${proxy}http://api.openweathermap.org/data/2.5/find?q="+result+"&units=metric&appid=344b790f76ac39d29c9973f2736c19c3`, 
+    // const proxy="https://cors-anywhere.herokupp.com/"
+    $.getJSON("http://api.openweathermap.org/data/2.5/find?q="+result+"&units=metric&appid=344b790f76ac39d29c9973f2736c19c3", 
+    
     function(data){
-
         let icon="http://openweathermap.org/img/w/"+data.list[0].weather[0].icon+".png";
         document.getElementById("cityName").innerHTML=data.list[0].name;
         document.getElementById("stateName").innerHTML=data.list[0].sys.country;
@@ -23,10 +23,10 @@ function displayData(){
 }
 
 document.getElementById("fahrenheit").addEventListener("click",function displayFah(e){
-    let temp1=document.getElementById("temperature").textContent;
-    console.log(temp1);
+    let celTemp=document.getElementById("temperature").textContent;
+    // console.log(temp1);
 
-    let fahTemp=Math.round((temp1*1.8)+32);
+    let fahTemp=Math.round((celTemp*1.8)+32);
     // console.log(fahTemp);
     document.getElementById("temperature").innerHTML=fahTemp;
     document.getElementById("fahrenheit").style.backgroundColor = "rgb(178, 183, 189)";
@@ -38,8 +38,8 @@ document.getElementById("fahrenheit").addEventListener("click",function displayF
 
 document.getElementById("celcius").addEventListener("click",function displayCel(e){
 
-    let temp1=document.getElementById("temperature").textContent;
-    console.log(temp1);
+    let fa=document.getElementById("temperature").textContent;
+    // console.log(temp1);
     let celTemp=Math.round((temp1-32) * 5/9 );
     document.getElementById("temperature").innerHTML=celTemp;
     document.getElementById("celcius").disabled = true;
