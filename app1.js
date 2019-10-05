@@ -14,16 +14,14 @@ document.getElementById("list").addEventListener("keypress",function displayData
 document.getElementById("fahrenheit").addEventListener("click",function displayFah(e){
 
         let result=document.getElementById("list").value;
-        dw =new displayWeather(result);
+    
+        dw =new Weather(result);
         dw.displayFahrenheit();
-
 })
-
-
-// //display temperature in celcius
+ //display temperature in celcius
 document.getElementById("celcius").addEventListener("click",function displayCel(e){
     
     let result=document.getElementById("list").value;
-    dw =new displayWeather(result);
+    dw =new Weather(result);
     dw.displayCelcius();
 })

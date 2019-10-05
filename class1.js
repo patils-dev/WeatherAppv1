@@ -1,4 +1,4 @@
-class displayWeather{
+class Weather{
     constructor(city)
     {
         this.city=city;
@@ -29,7 +29,8 @@ class displayWeather{
             document.getElementById("celcius").disabled = true;
         })
     }
-    displayFahrenheit(){
+    displayFahrenheit()
+    {
             let celTemp=document.getElementById("temperature").textContent;
             let fahTemp=Math.round((celTemp*1.8)+32);
             // console.log(fahTemp);
@@ -38,9 +39,9 @@ class displayWeather{
             document.getElementById("fahrenheit").disabled = true;
             document.getElementById("celcius").disabled = false;
             document.getElementById("celcius").style.backgroundColor="white";
-        
-        }
-        displayCelcius(){
+
+    }
+     displayCelcius(){
             let fahTemp=document.getElementById("temperature").textContent;
             let celTemp=Math.round((fahTemp-32) * 5/9 );
             document.getElementById("temperature").innerHTML=celTemp;
@@ -48,7 +49,8 @@ class displayWeather{
             document.getElementById("fahrenheit").disabled= false;
             document.getElementById("fahrenheit").style.backgroundColor="white";
             document.getElementById("celcius").style.backgroundColor = "rgb(178, 183, 189)";
-        }
+    }
+
 }
 
 
