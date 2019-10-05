@@ -1,10 +1,10 @@
-class displayWeather{
+class Weather{
     constructor(city)
     {
         this.city=city;
     }
 
-     //display day and date
+    //display day and date
     displayDate()
     {
         var d=new Date().toLocaleTimeString('en-US', { hour: 'numeric', hour12: true, minute: 'numeric' });
