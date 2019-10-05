@@ -6,4 +6,4 @@ HTML, CSS, JavaScript(ES6), Bootstrap
 Create a weather Application to display real-time weather of any specified city.
 #### ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ## Visit:
-[WeatherApplication](https://aadeshnichite.github.io/CanvasGame/)
+https://patils-dev.github.io/WeatherAppv1/
