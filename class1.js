@@ -1,4 +1,4 @@
-class Weather{
+class displayWeather{
     constructor(city)
     {
         this.city=city;
@@ -49,7 +49,7 @@ class Weather{
             document.getElementById("fahrenheit").disabled= false;
             document.getElementById("fahrenheit").style.backgroundColor="white";
             document.getElementById("celcius").style.backgroundColor = "rgb(178, 183, 189)";
-    }
+        }
 
 }
 

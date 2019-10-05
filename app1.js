@@ -15,13 +15,13 @@ document.getElementById("fahrenheit").addEventListener("click",function displayF
 
         let result=document.getElementById("list").value;
     
-        dw =new Weather(result);
+        dw =new displayWeather(result);
         dw.displayFahrenheit();
 })
  //display temperature in celcius
 document.getElementById("celcius").addEventListener("click",function displayCel(e){
     
     let result=document.getElementById("list").value;
-    dw =new Weather(result);
+    dw =new displayWeather(result);
     dw.displayCelcius();
 })
