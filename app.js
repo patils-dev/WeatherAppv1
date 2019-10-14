@@ -1,32 +1,27 @@
 //display city details
-document.getElementById("btn").addEventListener("click",function displayData(e){
+document.getElementById("list").addEventListener("keypress",function displayData(e){
+    if(e.keyCode==13)
+    {
+        // console.log("kegjd")
+        let result=document.getElementById("list").value;
+        dw =new Weather(result);
+        dw.displayValues();
+    }
 
-    let result=document.getElementById("list").value;
-    const dw=new displayWeather(result);
-    // console.log(dw.city);
-    // console.log(dw.weather);
-    ui=new UI();
-    ui.displayDate();
-    ui.displayValues(dw);
-    // ui. displayFahrenheit(dw);
-    // console.log(result);
 })
 
-//display temperature in Fahrenheit
+// display temperature in Fahrenheit
 document.getElementById("fahrenheit").addEventListener("click",function displayFah(e){
 
-    let result=document.getElementById("list").value;
-    const dw=new displayWeather(result);
-    ui=new UI();
-    ui.displayFahrenheit(dw);
+        let result=document.getElementById("list").value;
+    
+        dw =new Weather(result);
+        dw.displayFahrenheit();
 })
-
-
-//display temperature in celcius
+ //display temperature in celcius
 document.getElementById("celcius").addEventListener("click",function displayCel(e){
     
     let result=document.getElementById("list").value;
-    const dw=new displayWeather(result);
-    ui=new UI();
-    ui.displayCelcius(dw);
+    dw =new Weather(result);
+    dw.displayCelcius();
 })

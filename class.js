@@ -1,20 +1,9 @@
-class displayWeather{
+class Weather{
     constructor(city)
     {
         this.city=city;
-        this.weather=[
-            {city:"Pune",state:"Maharashtra", weather:"Cloudy",temperature:32,icon:"⛅"},
-            {city:"Kolhapur",state:"Maharashtra", weather:"Rainy",temperature:26,icon:"🌧️"},
-            {city:"Banglore",state:"Karnataka", weather:"Sunny",temperature:28,icon:"☀️"},
-            {city:"Mumbai",state:"Maharashtra", weather:"Rainy",temperature:29,icon:"🌧️"},
-            {city:"Chennai",state:"Tamilnadu", weather:"Sunny",temperature:30,icon:"☀️"},
-            {city:"Dehli",state:"Dehli", weather:"Cloudy", temperature:28,icon:"⛅"},
-            {city:"Hyderabad",state:"Andhrapradesh",weather:"Sunny",temperature:30,icon:"☀️"},
-            {city:"Belgaum",state:"Karnataka", weather:"Rainy",temperature:"25",icon:"🌧️"}
-        ]
     }
-}
-class UI{
+
     //display day and date
     displayDate()
     {
@@ -25,34 +14,42 @@ class UI{
         document.getElementById("day").innerHTML =week[n]+" , "+d;
     }
 
-    displayValues(dw){
-        //console.log(dw.city)
-        let resultcity=dw.city;
-        //let selectedCity=dw.weather.find(v=>{return v.city==result});
-        //console.log(resultcity);
-        //console.log(dw.weather)
-        let selectedCity=dw.weather.find(v=>{return v.city==resultcity})
-        // console.log(selectedCity);
-        document.getElementById("cityName").innerHTML=selectedCity['city'];
-        document.getElementById("stateName").innerHTML=selectedCity['state'];
-        document.getElementById("weatherName").innerHTML=selectedCity['weather']+selectedCity['icon'];
-        document.getElementById("temperature").innerHTML=selectedCity['temperature'];
+    displayValues(){
+        let selectedCity=this.city;
+
+        // const proxy="https://cors-anywhere.herokupp.com/"
+        $.getJSON("http://api.openweathermap.org/data/2.5/find?q="+selectedCity+"&units=metric&appid=344b790f76ac39d29c9973f2736c19c3", 
+        function(data){
+            let icon="http://openweathermap.org/img/w/"+data.list[0].weather[0].icon+".png";
+            document.getElementById("cityName").innerHTML=data.list[0].name;
+            document.getElementById("stateName").innerHTML=data.list[0].sys.country;
+            $("#icon").attr("src",icon);
+            document.getElementById("weatherName").innerHTML=data.list[0].weather[0].main;
+            document.getElementById("temperature").innerHTML=data.list[0].main.temp;
+            document.getElementById("celcius").disabled = true;
+        })
     }
-    displayFahrenheit(dw){
-            // let cityTemp=document.getElementById("cityName").innerHTML;
-            let resultcity=dw.city;
-            //console.log(resultcity);
-            let selectedCity=dw.weather.find(v=>{return v.city==resultcity}); 
-            let fahTemp=Math.round((selectedCity.temperature*1.8)+32);
-            //console.log(fahTemp);
+    displayFahrenheit()
+    {
+            let celTemp=document.getElementById("temperature").textContent;
+            let fahTemp=Math.round((celTemp*1.8)+32);
+            // console.log(fahTemp);
             document.getElementById("temperature").innerHTML=fahTemp;
-        
-        }
-     displayCelcius(dw){
-            // let cityTemp=document.getElementById("cityName").innerHTML;
-            let resultcity=dw.city;
-            let selectedCity=dw.weather.find(v=>{return v.city==resultcity});
-            document.getElementById("temperature").innerHTML=selectedCity['temperature'];
-            //console.log(selectedCity);
-        }
+            document.getElementById("fahrenheit").style.backgroundColor = "rgb(178, 183, 189)";
+            document.getElementById("fahrenheit").disabled = true;
+            document.getElementById("celcius").disabled = false;
+            document.getElementById("celcius").style.backgroundColor="white";
+
+    }
+    displayCelcius()
+    {
+        let fahTemp=document.getElementById("temperature").textContent;
+        let celTemp=Math.round((fahTemp-32) * 5/9 );
+        document.getElementById("temperature").innerHTML=celTemp;
+        document.getElementById("celcius").disabled = true;
+        document.getElementById("fahrenheit").disabled= false;
+        document.getElementById("fahrenheit").style.backgroundColor="white";
+        document.getElementById("celcius").style.backgroundColor = "rgb(178, 183, 189)";
+    }
+
 }

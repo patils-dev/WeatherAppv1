@@ -123,7 +123,7 @@ h1{
 }
 #list{
 
-        background:#FFFFFF url("search.png") no-repeat 4px;
+        background:#FFFFFF url("/images/search.png") no-repeat 4px;
         padding:4px 4px 4px 22px;
         border:2px solid #456879;
 	    border-radius:10px;
