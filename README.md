@@ -4,5 +4,7 @@ Web application which shows current date,time. We can get weather of some cities
 HTML, CSS, JavaScript(ES6), Bootstrap
 ## Objective:
 Create a weather Application to display real-time weather of any specified city.
+## Image:
+![alt text](images/weatherapp.png)
 ## Visit:
 https://smita-dev.github.io/WeatherAppv1/
