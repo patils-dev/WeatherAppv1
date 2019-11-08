@@ -1,5 +1,5 @@
 # WeatherAppv1
-Web application which shows current date,time and weather of specified city.
+Web application which shows current date,time. We can get weather of some cities which are stored in json file.I have developed this application to learn array in javascript and its function. 
 ## Technology Used:
 HTML, CSS, JavaScript(ES6), Bootstrap
 ## Objective:
