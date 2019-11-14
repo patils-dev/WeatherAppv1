@@ -7,30 +7,34 @@ Objective: To display weather of specified city in celcius and fahrenheit-->
         <meta charset='utf-8'>
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>WeatherApp</title>
-        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
         <!--leftside display-->
         <div class="container-fluid">
             <div class="leftSide">
+                <!--Heading of application-->
                 <h1 class="name"><span>Weather</span>App</h1>
             </div>
             <!-- rightside display -->
             <div class="rightSide">
                 <div id="showWeather">
+                    <!--display cityname display state-->
                     <h1 id="cityName">Banglore</h1>, <h1 id="stateName">Kranataka</h1>
+                    
                     <p id="day"></p>
+                    <!--display weather with weather icon-->
                     <div class="weather">
                         <p id="weatherName">Partly cloudy</p><img id="icon" src="images/download.jpg">
                     </div>
+                    <!--display temperature-->
                     <h2 id="temperature"></h2>
+                    <!--button to convert temperature into farenheit or celcius-->
                     <button id="celcius">&#8451;</button> |
                     <button id="fahrenheit">F</button>
                     <!--To select city -->
                     <h4>Enter City Name :</h4>
                     <input type="text" id="list"  name="cities" placeholder="Enter City" />
-                    <!-- <button id="btn" type="submit" >submit</button> -->
                 </div>
             </div>
         </div>
@@ -38,6 +42,4 @@ Objective: To display weather of specified city in celcius and fahrenheit-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="/js/app.js"></script>
     <script type="text/javascript" src="/js/class.js"></script>
-    <!-- <script type="text/javascript" src="try.js"></script>  -->
-
 </html>
