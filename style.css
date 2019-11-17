@@ -5,15 +5,15 @@ body{
     width: 100%;
 }
 .leftSide{
-        width: 50%;
-        background-color: rgb(22, 169, 228);
-        height: 500px; 
-        float: left;
-        padding: 10px;
-        padding-bottom: 200px;
-        display: flex; 
-        align-items: center; 
-        justify-content: center;
+    width: 50%;
+    background-color: rgb(22, 169, 228);
+    height: 500px; 
+    float: left;
+    padding: 10px;
+    padding-bottom: 200px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
 }
 .rightSide{
     align-items: center;
@@ -98,16 +98,7 @@ h3{
     padding:0;
     cursor: pointer;
 }
-/* #celcius:active {
-    background-color:rgb(87, 183, 221);
-    box-shadow: 0 5px rgb(71, 139, 241);
-    transform: translateY(2px);
- }
- #fahrenheit:active {
-    background-color:rgb(87, 183, 221);
-    box-shadow: 0 5px gray;
-    transform: translateY(2px);
- } */
+
 #showWeather,#weatherName
 {
     display:inline;
@@ -115,9 +106,6 @@ h3{
 h1{
     display: inline;
 }
-/* h2{
-    display: inline;
-} */
 .name{
     font-size: 3rem;
 }
